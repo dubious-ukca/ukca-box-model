@@ -1,0 +1,3204 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Documentation for UKCA Box Model">
+    <meta name="author" content="Rob Waters" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>box_environment_type &ndash; UKCA Box Model </title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link href="../css/fontawesome.min.css" rel="stylesheet">
+    <link href="../css/brands.min.css" rel="stylesheet">
+    <link href="../css/regular.min.css" rel="stylesheet">
+    <link href="../css/solid.min.css" rel="stylesheet">
+    <link href="../css/v4-font-face.min.css" rel="stylesheet">
+    <link href="../css/v4-shims.min.css" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async
+            integrity="sha256-DViIOMYdwlM/axqoGDPeUyf0urLoHMN4QACBKyB58Uw=" crossorigin="anonymous"></script>
+    <!-- Other scripts and stylesheets -->
+    <link href="../css/local.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">UKCA Box Model </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../page/index.html">Documentation</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/namelists.html">Namelists</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/ukca_box_model_main.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>box_environment_type
+      <small>Derived Type</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title="<p>46.6% of total for derived types.</p>Including implementation: 167 statements, 46.6% of total for derived types.">167 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/box_environment.F90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/box_environment.f90.html'>box_environment.F90</a></li>
+                <li class="breadcrumb-item"><a href='../module/box_environment_mod.html'>box_environment_mod</a></li>
+            <li class="breadcrumb-item active" aria-current="page">box_environment_type</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Enable Bootstrap tooltips
+    (function () {
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    })();
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-z_top_of_model">z_top_of_model</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-sin_declination">sin_declination</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-equation_of_time">equation_of_time</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_ch4">atmospheric_ch4</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_co2">atmospheric_co2</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_h2">atmospheric_h2</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_n2">atmospheric_n2</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_o2">atmospheric_o2</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_n2o">atmospheric_n2o</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_cfc11">atmospheric_cfc11</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_cfc12">atmospheric_cfc12</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_cfc113">atmospheric_cfc113</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_hcfc22">atmospheric_hcfc22</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_hfc125">atmospheric_hfc125</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_hfc134a">atmospheric_hfc134a</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_mebr">atmospheric_mebr</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_mecl">atmospheric_mecl</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_ch2br2">atmospheric_ch2br2</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_chbr3">atmospheric_chbr3</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_cfc114">atmospheric_cfc114</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_cfc115">atmospheric_cfc115</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_ccl4">atmospheric_ccl4</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_meccl3">atmospheric_meccl3</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_hcfc141b">atmospheric_hcfc141b</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_hcfc142b">atmospheric_hcfc142b</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_h1211">atmospheric_h1211</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_h1202">atmospheric_h1202</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_h1301">atmospheric_h1301</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_h2402">atmospheric_h2402</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-atmospheric_cos">atmospheric_cos</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-soil_moisture_layer1">soil_moisture_layer1</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-fland">fland</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-ibvoc_isoprene">ibvoc_isoprene</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-ibvoc_terpene">ibvoc_terpene</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-ibvoc_methanol">ibvoc_methanol</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-ibvoc_acetone">ibvoc_acetone</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-inferno_bc">inferno_bc</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-inferno_ch4">inferno_ch4</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-inferno_co">inferno_co</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-inferno_nox">inferno_nox</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-inferno_oc">inferno_oc</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-inferno_so2">inferno_so2</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-inferno_c2h4">inferno_c2h4</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-inferno_c2h6">inferno_c2h6</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-inferno_c3h8">inferno_c3h8</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-inferno_hcho">inferno_hcho</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-inferno_mecho">inferno_mecho</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-inferno_nh3">inferno_nh3</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-inferno_dms">inferno_dms</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-eta_theta_levels~4">eta_theta_levels</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-latitude">latitude</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-true_latitude">true_latitude</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-longitude">longitude</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-true_longitude">true_longitude</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-sin_latitude">sin_latitude</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-cos_latitude">cos_latitude</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-tan_latitude">tan_latitude</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-conv_cloud_lwp">conv_cloud_lwp</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-tstar">tstar</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-zbl">zbl</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-rough_length">rough_length</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-seaice_frac">seaice_frac</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-frac_types">frac_types</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-laift_lp">laift_lp</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-canhtft_lp">canhtft_lp</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-tstar_tile">tstar_tile</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-z0tile_lp">z0tile_lp</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-pstar">pstar</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-surf_albedo">surf_albedo</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-zhsc">zhsc</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-u_scalar_10m">u_scalar_10m</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-surf_hf">surf_hf</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-u_s">u_s</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-ch4_wetl_emiss">ch4_wetl_emiss</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-dms_sea_conc">dms_sea_conc</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-chloro_sea">chloro_sea</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-dust_flux_div1">dust_flux_div1</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-dust_flux_div2">dust_flux_div2</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-dust_flux_div3">dust_flux_div3</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-dust_flux_div4">dust_flux_div4</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-dust_flux_div5">dust_flux_div5</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-dust_flux_div6">dust_flux_div6</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-surf_wetness">surf_wetness</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-grid_surf_area">grid_surf_area</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-ext_cg_flash">ext_cg_flash</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-ext_ic_flash">ext_ic_flash</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-kent">kent</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-kent_dsc">kent_dsc</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-conv_cloud_base">conv_cloud_base</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-conv_cloud_top">conv_cloud_top</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-lscat_zhang">lscat_zhang</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-land_sea_mask">land_sea_mask</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-l_tile_active">l_tile_active</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-u_rho_levels">u_rho_levels</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-v_rho_levels">v_rho_levels</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-geoph_on_theta_mlevs">geopH_on_theta_mlevs</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-theta">theta</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-q">q</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-qcf">qcf</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-conv_cloud_amount">conv_cloud_amount</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-rho_r2">rho_r2</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-qcl">qcl</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-exner_rho_levels">exner_rho_levels</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-area_cloud_fraction">area_cloud_fraction</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-cloud_frac">cloud_frac</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-cloud_liq_frac">cloud_liq_frac</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-exner_theta_levels">exner_theta_levels</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-p_layer_boundaries">p_layer_boundaries</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-p_theta_levels">p_theta_levels</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-t_theta_levels">t_theta_levels</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-rhokh_rdz">rhokh_rdz</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-dtrdz">dtrdz</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-we_lim">we_lim</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-t_frac">t_frac</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-zrzi">zrzi</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-we_lim_dsc">we_lim_dsc</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-t_frac_dsc">t_frac_dsc</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-zrzi_dsc">zrzi_dsc</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-stcon">stcon</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-ls_rain3d">ls_rain3d</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-ls_snow3d">ls_snow3d</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-autoconv">autoconv</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-accretion">accretion</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-pv_on_theta_mlevs">pv_on_theta_mlevs</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-conv_rain3d">conv_rain3d</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-conv_snow3d">conv_snow3d</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-so4_sa_clim">so4_sa_clim</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-so4_aitken">so4_aitken</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-so4_accum">so4_accum</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-soot_fresh">soot_fresh</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-soot_aged">soot_aged</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-ocff_fresh">ocff_fresh</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-ocff_aged">ocff_aged</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-biogenic">biogenic</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-dust_div1">dust_div1</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-dust_div2">dust_div2</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-dust_div3">dust_div3</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-dust_div4">dust_div4</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-dust_div5">dust_div5</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-dust_div6">dust_div6</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-sea_salt_film">sea_salt_film</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-sea_salt_jet">sea_salt_jet</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-co2_interactive">co2_interactive</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-rim_cry">rim_cry</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-rim_agg">rim_agg</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-vertvel">vertvel</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-bl_tke">bl_tke</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-interf_z">interf_z</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-grid_area_fullht">grid_area_fullht</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-grid_volume">grid_volume</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-grid_airmass">grid_airmass</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-rel_humid_frac">rel_humid_frac</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-rel_humid_frac_clr">rel_humid_frac_clr</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-qsvp">qsvp</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-h2o2_offline">h2o2_offline</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-ho2_offline">ho2_offline</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-no3_offline">no3_offline</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-o3_offline">o3_offline</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-oh_offline">oh_offline</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-r_theta_levels~4">r_theta_levels</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-r_rho_levels~4">r_rho_levels</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-p_rho_levels">p_rho_levels</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-aod_sulph_accum">aod_sulph_accum</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-aod_sulph_aitk">aod_sulph_aitk</a>
+            <a class="list-group-item" href="../type/box_environment_type.html#variable-photol_rates">photol_rates</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2 id="type-def-statement">
+        type, public :: box_environment_type</h2>
+    <p>derived type for storing all ukca environmental fields</p>
+    <br>
+
+    <section>
+    <h2>Components</h2>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-z_top_of_model"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>z_top_of_model</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>height of model top (m)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sin_declination"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>sin_declination</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>sin of solar declination</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-equation_of_time"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>equation_of_time</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>equation of time, specified as an hour angle (radians)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_ch4"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_ch4</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of methane in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_co2"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_co2</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of carbon dioxide in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_h2"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_h2</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of molecular hydrogen in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_n2"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_n2</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of molecular nitrogen in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_o2"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_o2</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of molecular oxygen in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_n2o"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_n2o</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of nitrous oxide in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_cfc11"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_cfc11</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of cfc11 in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_cfc12"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_cfc12</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of cfc12 in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_cfc113"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_cfc113</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of cfc113 in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_hcfc22"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_hcfc22</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of hcfc22 in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_hfc125"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_hfc125</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of hfc125 in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_hfc134a"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_hfc134a</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of hfc134a in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_mebr"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_mebr</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of methyl bromide in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_mecl"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_mecl</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of methyl chloride in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_ch2br2"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_ch2br2</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of dibromomethane in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_chbr3"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_chbr3</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of tribromomethane in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_cfc114"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_cfc114</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of cfc114 in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_cfc115"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_cfc115</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of cfc115 in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_ccl4"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_ccl4</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of carbon tetrachloride in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_meccl3"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_meccl3</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of methyl chloroform in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_hcfc141b"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_hcfc141b</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of hcfc141b in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_hcfc142b"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_hcfc142b</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of hcfc142b in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_h1211"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_h1211</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of h1211 in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_h1202"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_h1202</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of h1202 in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_h1301"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_h1301</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of h1301 in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_h2402"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_h2402</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of h2402 in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-atmospheric_cos"></span>
+              real,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>atmospheric_cos</strong></td>
+<td> =</td>
+                <td>rmdi</td>
+            <td>
+                <p>prescribed mass fraction of carbonyl sulfide in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-soil_moisture_layer1"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>soil_moisture_layer1</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>moisture_content_of_soil_layer at surface (kg/m^2) {UM:00009}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-fland"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>fland</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>land_area_fraction {UM:00505}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ibvoc_isoprene"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>ibvoc_isoprene</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Gridbox mean isoprene emission flux (kgC/m2/s)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ibvoc_terpene"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>ibvoc_terpene</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Gridbox mean (mono-)terpene emission flux (kgC/m2/s)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ibvoc_methanol"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>ibvoc_methanol</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Gridbox mean methanol emission flux (kgC/m2/s)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ibvoc_acetone"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>ibvoc_acetone</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Gridbox mean acetone emission flux (kgC/m2/s)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-inferno_bc"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>inferno_bc</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Gridbox mean Black Carbon emissions from fires (kg/m2/s)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-inferno_ch4"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>inferno_ch4</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Gridbox mean Methane emissions from fires (kg/m2/s)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-inferno_co"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>inferno_co</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Gridbox mean Carbon monoxide emissions from fires (kg/m2/s)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-inferno_nox"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>inferno_nox</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Gridbox mean Nitric oxide emissions from fires (kg/m2/s)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-inferno_oc"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>inferno_oc</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Gridbox mean Organic Carbon emissions from fires (kg/m2/s)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-inferno_so2"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>inferno_so2</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Gridbox mean Sulphur dioxide emissions from fires (kg/m2/s)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-inferno_c2h4"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>inferno_c2h4</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Gridbox mean ethene emissions from fires (kg/m2/s)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-inferno_c2h6"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>inferno_c2h6</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Gridbox mean ethane emissions from fires (kg/m2/s)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-inferno_c3h8"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>inferno_c3h8</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Gridbox mean propane emissions from fires (kg/m2/s)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-inferno_hcho"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>inferno_hcho</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Gridbox mean formaldehyde emissions from fires (kg/m2/s)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-inferno_mecho"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>inferno_mecho</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Gridbox mean acetaldehyde emissions from fires (kg/m2/s)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-inferno_nh3"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>inferno_nh3</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Gridbox mean ammonia emissions from fires (kg/m2/s)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-inferno_dms"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>inferno_dms</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Gridbox mean dimethyl sulfide from fires (kg/m2/s)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-eta_theta_levels~4"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>eta_theta_levels</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>eta of each theta level (dimensionless, 0 at surface, 1 at model top)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-latitude"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>latitude</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>latitude (degrees north)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-true_latitude"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>true_latitude</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>true latitude (radians north)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-longitude"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>longitude</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>longitude (degrees east, &gt;=0, &lt;360)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-true_longitude"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>true_longitude</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>true longitude (radians east)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sin_latitude"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>sin_latitude</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>SIN(latitude)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-cos_latitude"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>cos_latitude</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>COS(latitude)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tan_latitude"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>tan_latitude</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>TAN(latitude)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-conv_cloud_lwp"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>conv_cloud_lwp</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>convective cloud liquid water path (kg/m^2) {UM:00016}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tstar"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>tstar</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>surface_temperature [CF] (K) {UM:00024}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-zbl"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>zbl</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>atmosphere_boundary_layer_thickness [CF] (m) {UM:00025}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-rough_length"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>rough_length</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>surface_roughness_length [CF] (m)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-seaice_frac"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>seaice_frac</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>sea_ice_area_fraction [CF] with respect to sea area {UM:00031}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-frac_types"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>frac_types</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>fraction of surface type with respect to land area {UM:00216}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-laift_lp"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>laift_lp</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>leaf_area_index [CF] of plant functional type {UM:00217}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-canhtft_lp"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>canhtft_lp</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>canopy_height [CF] of plant functional type (m) {UM:00218}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-tstar_tile"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>tstar_tile</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>surface_temperature [CF] on tiles (K) {UM:00233}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-z0tile_lp"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>z0tile_lp</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>surface_roughness_length [CF] on tiles (m) {UM:00234}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pstar"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>pstar</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>surface_air_pressure [CF] (Pa) {UM:00409}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-surf_albedo"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>surf_albedo</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>surface_albedo [CF]</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-zhsc"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>zhsc</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>height of top of decoupled stratocumulus layer, for bl_tracer_mix (L
+units) {UM:03073}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-u_scalar_10m"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>u_scalar_10m</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>wind_speed [CF] at 10 m (m/s) {UM:03230}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-surf_hf"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>surf_hf</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>surface_upward_sensible_heat_flux [CF] (W/m^2) {UM:03217}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-u_s"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>u_s</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>explicit friction velocity (m/s) {UM:03465}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ch4_wetl_emiss"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>ch4_wetl_emiss</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>CH4 wetland flux (ugC/m2/s) {UM:08242}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dms_sea_conc"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>dms_sea_conc</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p UM:00132>mole_concentration_of_dimethyl_sulphide_in_sea_water [CF] (nmol/l)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-chloro_sea"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>chloro_sea</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>ocean near-surface chlorophyll (kg/m^3) {UM:00096}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dust_flux_div1"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>dust_flux_div1</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>dust emissions in CLASSIC size bin 1 (kg/m^2/s) {UM:03401}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dust_flux_div2"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>dust_flux_div2</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>dust emissions in CLASSIC size bin 2 (kg/m^2/s) {UM:03402}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dust_flux_div3"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>dust_flux_div3</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>dust emissions in CLASSIC size bin 3 (kg/m^2/s) {UM:03403}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dust_flux_div4"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>dust_flux_div4</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>dust emissions in CLASSIC size bin 4 (kg/m^2/s) {UM:03404}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dust_flux_div5"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>dust_flux_div5</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>dust emissions in CLASSIC size bin 5 (kg/m^2/s) {UM:03405}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dust_flux_div6"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>dust_flux_div6</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>dust emissions in CLASSIC size bin 6 (kg/m^2/s) {UM:03406}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-surf_wetness"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>surf_wetness</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>surface wetness {UM:00634}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-grid_surf_area"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>grid_surf_area</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Gridbox surface area (m^2)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ext_cg_flash"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>ext_cg_flash</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>External cloud-to-ground flash rate [s-1]</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ext_ic_flash"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>ext_ic_flash</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>External intracloud flash rate [s-1]</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-kent"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>kent</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p UM:03065>grid level of surface mixed layer inversion, for bl_tracer_mix</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-kent_dsc"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>kent_dsc</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p UM:03069>grid level of decoupled stratocumulus inversion, for bl_tracer_mix</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-conv_cloud_base"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>conv_cloud_base</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>lowest convective cloud base level no. {UM:05218}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-conv_cloud_top"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>conv_cloud_top</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>lowest convective cloud top level no. {UM:05219}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-lscat_zhang"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>lscat_zhang</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>surface type for gridbox as required by Zhang et al (Aero drydep) scheme</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-land_sea_mask"></span>
+              logical,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>land_sea_mask</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>land_binary_mask [CF] (land = .true.) {UM:00030}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-l_tile_active"></span>
+              logical,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>l_tile_active</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>active tile indicator (.true. if tile is in use)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-u_rho_levels"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>u_rho_levels</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><code>uwind_rho_levels</code> (m/s) {UM:00002}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-v_rho_levels"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>v_rho_levels</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p><code>vwind_rho_levels</code> (m/s) {UM:00003}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-geoph_on_theta_mlevs"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>geopH_on_theta_mlevs</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>geopotential_height_theta_levels (m) {UM:16201}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-theta"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>theta</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>air_potential_temperature [CF] (K) {UM:00004}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-q"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>q</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>specific_humidity [CF] {UM:00010}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-qcf"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>qcf</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>mass_fraction_of_cloud_ice_in_air [CF] {UM:00012}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-conv_cloud_amount"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>conv_cloud_amount</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>fractional convective cloud amount with anvil {UM:00211}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-rho_r2"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>rho_r2</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>density<em>radius</em>radius (kg/m) {UM:00253}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-qcl"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>qcl</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>mass_fraction_of_cloud_liquid_water_in_air [CF] {UM:00254}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-exner_rho_levels"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>exner_rho_levels</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>dimensionless_exner_function [CF] at rho levels {UM:00255}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-area_cloud_fraction"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>area_cloud_fraction</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>cloud_area_fraction_in_atmosphere_layer [CF] {UM:00265}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-cloud_frac"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>cloud_frac</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>bulk cloud fraction {UM:00266}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-cloud_liq_frac"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>cloud_liq_frac</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>liquid cloud fraction {UM:00267}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-exner_theta_levels"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>exner_theta_levels</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>dimensionless_exner_function [CF] at theta levels {UM:00406}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-p_layer_boundaries"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>p_layer_boundaries</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>air_pressure [CF] at layer boundaries (Pa), for photolysis</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-p_theta_levels"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>p_theta_levels</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>air_pressure [CF] at theta levels (Pa) {UM:00408}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-t_theta_levels"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>t_theta_levels</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>air_temperature [CF] at theta levels (K), for photolysis</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-rhokh_rdz"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>rhokh_rdz</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>mixing coefficient above surface: (scalar eddy diffusivity * density)
+/ dz, for bl_tracer_mix (M/(L^2*T) units) {UM:03060}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dtrdz"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>dtrdz</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>dt/(density<em>radius</em>radius*dz) for scalar flux divergence, for
+bl_tracer_mix (T/M units) {UM:03064}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-we_lim"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>we_lim</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>density * entrainment rate implied by placing of subsidence at surface
+mixed layer inversion, for bl_tracer_mix (M/L^2/T units) {UM:03066}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-t_frac"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>t_frac</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>fraction of timestep surface mixed layer inversion is above level, for
+bl_tracer_mix {UM:03067}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-zrzi"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>zrzi</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>level height as fraction of surface mixed layer inversion height above
+ML base, for bl_tracer_mix {UM:03068}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-we_lim_dsc"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>we_lim_dsc</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p UM:03070>density * entrainment rate implied by placing of subsidence at
+decoupled stratocumulus inversion, for bl_tracer_mix (M/L^2/T units)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-t_frac_dsc"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>t_frac_dsc</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>fraction of timestep decoupled stratocumulus inversion is above level,
+for bl_tracer_mix {UM:03071}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-zrzi_dsc"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>zrzi_dsc</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>level height as fraction of decoupled stratocumulus inversion height
+above DSC ML base, for bl_tracer_mix {UM:03072}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-stcon"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>stcon</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>stomatal conductance on plant functional type (m/s) {UM:03462}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ls_rain3d"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>ls_rain3d</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p UM:04222>large_scale_rainfall_flux [CF] out of model levels (kg/m^2/s)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ls_snow3d"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>ls_snow3d</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p UM:04223>large_scale_snowfall_flux [CF] out of model levels (kg/m^2/s)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-autoconv"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>autoconv</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>rain autoconversion rate, mass fraction (/s) {UM:04257}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-accretion"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>accretion</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>rain accretion rate, mass fraction (/s) {UM:04258}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-pv_on_theta_mlevs"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>pv_on_theta_mlevs</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p UM:15218>ertel_potential_vorticity [CF] on theta levels (K m^2/(kg s))</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-conv_rain3d"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>conv_rain3d</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>convective_rainfall_flux [CF] (kg/m^2/s) {UM:05227}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-conv_snow3d"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>conv_snow3d</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>convective_snowfall_flux [CF] (kg/m^2/s) {UM:05228}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-so4_sa_clim"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>so4_sa_clim</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>sulphate aerosol surface area density (cm^2/cm^3)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-so4_aitken"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>so4_aitken</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>mass fraction of aitken mode sulfate dry aerosol expressed as sulfur in
+air {UM:00103}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-so4_accum"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>so4_accum</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>mass fraction of accumulation mode sulfate dry aerosol expressed as
+sulfur in air {UM:00104}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-soot_fresh"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>soot_fresh</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>mass fraction of fresh black carbon dry aerosol in air {UM:00108}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-soot_aged"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>soot_aged</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>mass fraction of aged black carbon dry aerosol in air {UM:00109}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ocff_fresh"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>ocff_fresh</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>mass fraction of fresh organic carbon from fossil fuel dry aerosol in
+air {UM:00114}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ocff_aged"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>ocff_aged</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>mass fraction of aged organic carbon from fossil fuel dry aerosol in
+air (kg/kg) {UM:00115}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-biogenic"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>biogenic</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p UM:00351>mass fraction of biogenic secondary organic dry aerosol in air</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dust_div1"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>dust_div1</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>mass fraction of dust division 1 dry aerosol in air {UM:00431}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dust_div2"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>dust_div2</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>mass fraction of dust division 2 dry aerosol in air {UM:00432}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dust_div3"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>dust_div3</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>mass fraction of dust division 3 dry aerosol in air {UM:00433}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dust_div4"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>dust_div4</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>mass fraction of dust division 4 dry aerosol in air {UM:00434}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dust_div5"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>dust_div5</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>mass fraction of dust division 5 dry aerosol in air {UM:00435}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-dust_div6"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>dust_div6</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>mass fraction of dust division 6 dry aerosol in air {UM:00436}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sea_salt_film"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>sea_salt_film</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p UM:01247>atmosphere number concentration of film mode sea salt particles (/m^3)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-sea_salt_jet"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>sea_salt_jet</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p UM:01248>atmosphere number concentration of jet mode sea salt particles (/m^3)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-co2_interactive"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>co2_interactive</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>mass_fraction_of_carbon_dioxide_in_air [CF] {UM:00252}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-rim_cry"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>rim_cry</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p UM:04247>riming rate for ice crystals from cloud liquid, mass fraction (/s)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-rim_agg"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>rim_agg</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>riming rate for ice aggregates, mass fraction (/s) {UM:04248}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-vertvel"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>vertvel</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>upward_air_velocity [CF] (m/s) {UM:00150}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-bl_tke"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>bl_tke</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>turbulent kinetic energy (m^2/s^2) {UM:03473}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-interf_z"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>interf_z</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>altitude of grid-cell interfaces (m)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-grid_area_fullht"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>grid_area_fullht</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>grid cell area (m^2), all levels</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-grid_volume"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>grid_volume</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>grid cell volume (m^3), theta levels</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-grid_airmass"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>grid_airmass</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>grid cell air mass (kg), theta levels</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-rel_humid_frac"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>rel_humid_frac</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>relative_humidity [CF]</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-rel_humid_frac_clr"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>rel_humid_frac_clr</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>clear-sky relative humidity</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-qsvp"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>qsvp</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>saturation vapour pressure of water (Pa)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-h2o2_offline"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>h2o2_offline</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>hydrogen peroxide as offline oxidant (kg/kg-air)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ho2_offline"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>ho2_offline</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>hydroperoxyl radical as offline oxidant (kg/kg-air)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-no3_offline"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>no3_offline</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>nitrate radical as offline oxidant (kg/kg-air)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-o3_offline"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>o3_offline</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>mass_fraction_of_ozone_in_air [CF] {UM:00060}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-oh_offline"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>oh_offline</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>hydroxyl radical as offline oxidant (kg/kg-air)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-r_theta_levels~4"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>r_theta_levels</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>distance from the centre of the Earth to theta levels (m)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-r_rho_levels~4"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>r_rho_levels</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>distance from the centre of the Earth to rho levels (m)</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-p_rho_levels"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>p_rho_levels</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>air_pressure [CF] at rho levels (Pa) {UM:00407}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-aod_sulph_accum"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>aod_sulph_accum</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>aerosol optical depth of accumulation mode sulphate, for photolysis</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-aod_sulph_aitk"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>aod_sulph_aitk</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>aerosol optical depth of Aitken mode sulphate, for photolysis</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-photol_rates"></span>
+              real,
+            </td>
+              <td>public,</td>
+            <td>
+              dimension(:, :, :, :), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>photol_rates</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>photolysis rates (row_length, rows, model_levels, jppj)</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    </section>
+    <br>
+    
+
+
+
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              UKCA Box Model
+ was developed by Rob Waters<br>              &copy; 2026 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+  </body>
+</html>

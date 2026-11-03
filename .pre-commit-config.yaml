@@ -1,0 +1,24 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ford-doc-check
+        name: ford documentation check
+        entry: ford project.md -o doc_local
+        language: system
+        pass_filenames: false
+        files: \.(F90|f90|F03|f03|F95|f95|F08|f08|F15|f15)$
+        stages: [pre-commit]
+        require_serial: true
+      - id: cmake-gfortran-warning-check
+        name: cmake gfortran warning check
+        entry: bash -c 'cmake -S . -B build && cmake --build build'
+        language: system
+        pass_filenames: false
+        files: ^(CMakeLists\.txt|src/CMakeLists\.txt|src/.*\.(F90|f90|F03|f03|F95|f95|F08|f08|F15|f15))$
+        stages: [pre-commit]
+        require_serial: true
+  - repo: https://github.com/PlasmaFAIR/fortitude-pre-commit
+    # Fortitude version.
+    rev: v0.8.0
+    hooks:
+      - id: fortitude

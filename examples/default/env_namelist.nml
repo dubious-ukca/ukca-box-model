@@ -1,0 +1,44 @@
+&core_environment
+  z_top_of_model = 150000.
+  latitude   = 30.
+  longitude  = 0.
+  t_theta_levels = 288.14999999999998
+  land_sea_mask = .TRUE.
+  tstar = 288.15
+  zbl = 1000.0
+  pstar = 101325.0
+  q = 0.01
+  qcf = 0.0
+  qcl = 0.0
+  conv_cloud_base = 0
+  conv_cloud_top = 0
+  p_theta_levels = 100000.0
+  cloud_frac = 0.0
+  ls_rain3d = 0.0
+  ls_snow3d = 0.0
+&end
+
+&offlinechem_environment
+  h2o2_offline = 1.0000e-10
+  ho2_offline = 2.0000e-11
+  no3_offline = 5.0000e-11
+  o3_offline = 1.0000e-05
+  oh_offline = 5.0000e-12
+&end
+
+&prescribed_conc_environment
+  atmospheric_co2 = 5.24100e-4
+  atmospheric_n2 = 7.547e-01
+  atmospheric_o2 = 0.2314
+&end
+
+&photolysis_environment
+  conv_cloud_lwp = 0.0
+  surf_albedo = 0.2
+  conv_cloud_amount = 0.0
+  area_cloud_fraction = 0.0
+&end
+
+&aerosol_environment
+  cloud_liq_frac = 0.0
+&end

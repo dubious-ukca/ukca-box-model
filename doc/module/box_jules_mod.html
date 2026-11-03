@@ -1,0 +1,750 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Documentation for UKCA Box Model">
+    <meta name="author" content="Rob Waters" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>box_jules_mod &ndash; UKCA Box Model</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link href="../css/fontawesome.min.css" rel="stylesheet">
+    <link href="../css/brands.min.css" rel="stylesheet">
+    <link href="../css/regular.min.css" rel="stylesheet">
+    <link href="../css/solid.min.css" rel="stylesheet">
+    <link href="../css/v4-font-face.min.css" rel="stylesheet">
+    <link href="../css/v4-shims.min.css" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async
+            integrity="sha256-DViIOMYdwlM/axqoGDPeUyf0urLoHMN4QACBKyB58Uw=" crossorigin="anonymous"></script>
+    <!-- Other scripts and stylesheets -->
+    <link href="../css/local.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">UKCA Box Model </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../page/index.html">Documentation</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/namelists.html">Namelists</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/ukca_box_model_main.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>box_jules_mod
+      <small>Module</small>
+      
+    </h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+            <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
+              <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
+                 title=" 2.0% of total for modules and submodules.">118 statements</a>
+            </li>
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/box_jules.F90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/box_jules.f90.html'>box_jules.F90</a></li>
+            <li class="breadcrumb-item active" aria-current="page">box_jules_mod</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Enable Bootstrap tooltips
+    (function () {
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    })();
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-ntype~4">ntype</a>
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-n_elev_ice">n_elev_ice</a>
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-i_elev_ice~2">i_elev_ice</a>
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-npft~2">npft</a>
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-nnvg">nnvg</a>
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-i_brd_leaf~2">i_brd_leaf</a>
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-i_brd_leaf_dec~2">i_brd_leaf_dec</a>
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-i_brd_leaf_eg_trop~2">i_brd_leaf_eg_trop</a>
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-i_brd_leaf_eg_temp~2">i_brd_leaf_eg_temp</a>
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-i_ndl_leaf~2">i_ndl_leaf</a>
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-i_ndl_leaf_dec~2">i_ndl_leaf_dec</a>
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-i_ndl_leaf_eg~2">i_ndl_leaf_eg</a>
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-i_c3_grass~2">i_c3_grass</a>
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-i_c3_crop~2">i_c3_crop</a>
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-i_c3_pasture~2">i_c3_pasture</a>
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-i_c4_grass~2">i_c4_grass</a>
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-i_c4_crop~2">i_c4_crop</a>
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-i_c4_pasture~2">i_c4_pasture</a>
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-i_shrub~2">i_shrub</a>
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-i_shrub_dec~2">i_shrub_dec</a>
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-i_shrub_eg~2">i_shrub_eg</a>
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-i_urban~2">i_urban</a>
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-i_lake~2">i_lake</a>
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-i_soil~2">i_soil</a>
+            <a class="list-group-item" href="../module/box_jules_mod.html#variable-i_ice~2">i_ice</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#subs-0"
+         aria-expanded="false" aria-controls="subs-0">
+         <h4 class="card-header bg-primary text-white">Subroutines</h4>
+      </a>
+      <div id="subs-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../module/box_jules_mod.html#proc-setup_jules">setup_jules</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+      <p>Module for storing constants for the UKCA box model that are stored in
+the Jules model for the operational runs. To reduce the number of
+dependencies on Jules, we store the constants here in the box model
+and set them to the same values as in Jules.</p>
+<p>Note the values of each constant are dependent on the number of land types
+(ntype), which is a configuration option set by the user. setup_jules()
+must therefore be called.</p>
+<br>          <div class="card mb-4">
+      <h3 class="card-header card-title bg-light">Uses</h3>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <ul class="list-inline">
+                  <li class="list-inline-item">ukca_missing_data_mod</li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+      
+      <br>
+
+
+        <section>
+          <h2>Variables</h2>
+            <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Visibility</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+<th></th><th scope="col">Initial</th>        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ntype~4"></span>
+              integer,
+            </td>
+              <td>protected</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ntype</strong></td>
+<td> =</td>
+                <td>imdi</td>
+            <td>
+                <p>number of land types</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-n_elev_ice"></span>
+              integer,
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>n_elev_ice</strong></td>
+<td> =</td>
+                <td>10</td>
+            <td>
+                <p>No. of elevated ice types in the 27 surface type configuration</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_elev_ice~2"></span>
+              integer,
+            </td>
+              <td>protected,</td>
+            <td>
+              dimension(:), allocatable
+            </td>
+            <td>::</td>
+            <td><strong>i_elev_ice</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                <p>Array of indices for the elevated ice types in the 27 surface type
+configuration</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-npft~2"></span>
+              integer,
+            </td>
+              <td>protected</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>npft</strong></td>
+<td> =</td>
+                <td>imdi</td>
+            <td>
+                <p>Number of plant functional types considered in interactive dry deposition</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-nnvg"></span>
+              integer,
+            </td>
+              <td>protected</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>nnvg</strong></td>
+<td> =</td>
+                <td>imdi</td>
+            <td>
+                <p>Number of non-vegetation surface types</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_brd_leaf~2"></span>
+              integer,
+            </td>
+              <td>protected</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i_brd_leaf</strong></td>
+<td> =</td>
+                <td>imdi</td>
+            <td>
+                <p>Index of surface type 'broad-leaf tree'</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_brd_leaf_dec~2"></span>
+              integer,
+            </td>
+              <td>protected</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i_brd_leaf_dec</strong></td>
+<td> =</td>
+                <td>imdi</td>
+            <td>
+                <p>Index of surface type 'broad-leaf dec tree'</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_brd_leaf_eg_trop~2"></span>
+              integer,
+            </td>
+              <td>protected</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i_brd_leaf_eg_trop</strong></td>
+<td> =</td>
+                <td>imdi</td>
+            <td>
+                <p>Index of surface type 'broad-leaf eg trop tree'</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_brd_leaf_eg_temp~2"></span>
+              integer,
+            </td>
+              <td>protected</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i_brd_leaf_eg_temp</strong></td>
+<td> =</td>
+                <td>imdi</td>
+            <td>
+                <p>Index of surface type 'broad-leaf eg temp tree'</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_ndl_leaf~2"></span>
+              integer,
+            </td>
+              <td>protected</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i_ndl_leaf</strong></td>
+<td> =</td>
+                <td>imdi</td>
+            <td>
+                <p>Index of surface type 'needle-leaf tree'</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_ndl_leaf_dec~2"></span>
+              integer,
+            </td>
+              <td>protected</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i_ndl_leaf_dec</strong></td>
+<td> =</td>
+                <td>imdi</td>
+            <td>
+                <p>Index of surface type 'needle-leaf dec tree'</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_ndl_leaf_eg~2"></span>
+              integer,
+            </td>
+              <td>protected</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i_ndl_leaf_eg</strong></td>
+<td> =</td>
+                <td>imdi</td>
+            <td>
+                <p>Index of surface type 'needle-leaf eg tree'</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_c3_grass~2"></span>
+              integer,
+            </td>
+              <td>protected</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i_c3_grass</strong></td>
+<td> =</td>
+                <td>imdi</td>
+            <td>
+                <p>Index of surface type 'c3 grass'</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_c3_crop~2"></span>
+              integer,
+            </td>
+              <td>protected</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i_c3_crop</strong></td>
+<td> =</td>
+                <td>imdi</td>
+            <td>
+                <p>Index of surface type 'c3 crop'</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_c3_pasture~2"></span>
+              integer,
+            </td>
+              <td>protected</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i_c3_pasture</strong></td>
+<td> =</td>
+                <td>imdi</td>
+            <td>
+                <p>Index of surface type 'c3 pasture'</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_c4_grass~2"></span>
+              integer,
+            </td>
+              <td>protected</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i_c4_grass</strong></td>
+<td> =</td>
+                <td>imdi</td>
+            <td>
+                <p>Index of surface type 'c4 grass'</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_c4_crop~2"></span>
+              integer,
+            </td>
+              <td>protected</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i_c4_crop</strong></td>
+<td> =</td>
+                <td>imdi</td>
+            <td>
+                <p>Index of surface type 'c4 crop'</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_c4_pasture~2"></span>
+              integer,
+            </td>
+              <td>protected</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i_c4_pasture</strong></td>
+<td> =</td>
+                <td>imdi</td>
+            <td>
+                <p>Index of surface type 'c4 pasture'</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_shrub~2"></span>
+              integer,
+            </td>
+              <td>protected</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i_shrub</strong></td>
+<td> =</td>
+                <td>imdi</td>
+            <td>
+                <p>Index of surface type 'shrub'</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_shrub_dec~2"></span>
+              integer,
+            </td>
+              <td>protected</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i_shrub_dec</strong></td>
+<td> =</td>
+                <td>imdi</td>
+            <td>
+                <p>Index of surface type 'shrub dec'</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_shrub_eg~2"></span>
+              integer,
+            </td>
+              <td>protected</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i_shrub_eg</strong></td>
+<td> =</td>
+                <td>imdi</td>
+            <td>
+                <p>Index of surface type 'shrub eg'</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_urban~2"></span>
+              integer,
+            </td>
+              <td>protected</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i_urban</strong></td>
+<td> =</td>
+                <td>imdi</td>
+            <td>
+                <p>Index of surface type 'urban'</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_lake~2"></span>
+              integer,
+            </td>
+              <td>protected</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i_lake</strong></td>
+<td> =</td>
+                <td>imdi</td>
+            <td>
+                <p>Index of surface type 'lake'</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_soil~2"></span>
+              integer,
+            </td>
+              <td>protected</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i_soil</strong></td>
+<td> =</td>
+                <td>imdi</td>
+            <td>
+                <p>Index of surface type 'soil'</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-i_ice~2"></span>
+              integer,
+            </td>
+              <td>protected</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>i_ice</strong></td>
+<td> =</td>
+                <td>imdi</td>
+            <td>
+                <p>Index of surface type 'ice'</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+        </section>
+        <br>
+
+
+
+
+
+
+        <section>
+          <h2>Subroutines</h2>
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-setup_jules"></span> <h3>public  subroutine <a href='../proc/setup_jules.html'>setup_jules</a>(ntype_in)  
+</h3></div>
+    <div class="card-body">
+          
+  <p>Set up the constants related to the Jules model for use by the UKCA box
+model. Takes number of land types (ntype) to determine constant values.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-ntype_in"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>ntype_in</strong></td>
+            <td>
+<p>Number of land types (surface types) for the box model configuration</p>
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+        </section>
+        <br>
+
+
+
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              UKCA Box Model
+ was developed by Rob Waters<br>              &copy; 2026 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+  </body>
+</html>

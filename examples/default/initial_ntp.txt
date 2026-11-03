@@ -1,0 +1,8 @@
+# Initial non-transported prognostic variables
+
+DEFAULT 1e-15
+
+# species
+MACRO2      1.0E-15
+ISO2        1.0E-15
+MeCOCH2OO   1.0E-15

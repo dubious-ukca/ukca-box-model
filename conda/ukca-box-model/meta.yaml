@@ -1,0 +1,36 @@
+{% set version = "0.1.0" %}
+
+package:
+  name: ukca-box-model
+  version: {{ version }}
+
+source:
+  path: ../..
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - gfortran==14.3.0
+    - gcc==14.3.0
+    - cmake
+    - ninja
+  host:
+    - ukca==0.1.0
+  run:
+    - ukca==0.1.0
+
+test:
+  commands:
+    - test -x "${PREFIX}/bin/ukca_box_model"
+    - test -f "${PREFIX}/share/ukca-box-model/examples/default/namelist.nml"
+
+about:
+  summary: UKCA standalone box model executable
+  home: https://github.com/RobWatersMet/ukca_box_model
+  license: BSD-3-Clause
+
+extra:
+  recipe-maintainers:
+    - RobWatersMet

@@ -1,0 +1,44 @@
+# Chemistry initial conditions
+
+DEFAULT 1e-15
+
+# species
+O3        1.0e-7
+NO        5.0e-10
+NO2       1.0e-9
+HONO2     1.0e-9
+H2O2      1.0e-9
+CH4       1.02e-6
+CO        1.0e-7
+BrO       1.0e-12
+HCl       1.0e-12
+BrONO2    1.0e-11
+ClONO2    1.0e-11
+BrCl      1.0e-12
+N2O       1.0e-15
+SO2       1.0e-9
+DMS       1.0e-10
+Monoterp  5.0e-10
+H2O       1.0e-2
+
+# aerosols
+Nuc_SOL_N 5.0000e-18
+Nuc_SOL_SU 1.0000e-14
+Ait_SOL_N 5.0000e-18
+Ait_SOL_SU 5.0000e-11
+Ait_SOL_BC 1.0000e-11
+Ait_SOL_OM 5.0000e-11
+Acc_SOL_N 1.0000e-18
+Acc_SOL_SU 5.0000e-10
+Acc_SOL_BC 1.0000e-10
+Acc_SOL_OM 5.0000e-10
+Acc_SOL_SS 1.0000e-11
+Cor_SOL_N 5.0000e-21
+Cor_SOL_SU 2.0000e-11
+Cor_SOL_BC 5.0000e-14
+Cor_SOL_OM 5.0000e-13
+Cor_SOL_SS 5.0000e-10
+Ait_INS_N 5.0000e-18
+Ait_INS_BC 2.0000e-10
+Ait_INS_OM 5.0000e-11
+Nuc_SOL_OM 1.0000e-13

@@ -1,0 +1,31 @@
+# fprettify settings: the formatting standard for the UKCA box model.
+#
+# Format all box model code (never the ukca/ submodule):
+#     fprettify -c .fprettify.rc -r .
+# Format one file:
+#     fprettify src/box_io.F90
+#
+# Pass -c .fprettify.rc for recursive runs: fprettify (0.3.7) only applies
+# `exclude` when the config file is given explicitly. Without it, -r would
+# also reformat the UKCA source in ukca/.
+#
+# Intrinsics without a space: `write(unit, ...)`, `if(...)`. Note: in
+# fprettify (0.3.7) the same setting also removes the space in END
+# statements, so we get `enddo`, `endif`, `endsubroutine` (accepted).
+
+# 2-space indentation; at most 79 characters per line (fortitude.toml's
+# line-length = 80 flags lines of 80 characters)
+indent = 2
+line-length = 79
+
+# whitespace preset 3: around operators (including + - * /), print/read
+whitespace = 3
+whitespace-intrinsics = false
+
+# lower-case keywords, intrinsic procedures/modules, operators, constants
+case = [1, 1, 1, 1]
+
+# never touch UKCA, generated files (FORD docs keep copies of the source in
+# doc/ and doc_local/; the dump module is generated) or build/run output.
+# Patterns match file and directory names, not paths.
+exclude = [ukca, doc, doc_local, build, runs, ukca_internal_dump.F90]

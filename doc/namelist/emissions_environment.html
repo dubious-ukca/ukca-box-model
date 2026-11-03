@@ -1,0 +1,621 @@
+<!-- -*- mode: jinja2 -*- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Documentation for UKCA Box Model">
+    <meta name="author" content="Rob Waters" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>  emissions_environment &ndash; UKCA Box Model
+</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link href="../css/fontawesome.min.css" rel="stylesheet">
+    <link href="../css/brands.min.css" rel="stylesheet">
+    <link href="../css/regular.min.css" rel="stylesheet">
+    <link href="../css/solid.min.css" rel="stylesheet">
+    <link href="../css/v4-font-face.min.css" rel="stylesheet">
+    <link href="../css/v4-shims.min.css" rel="stylesheet">
+    <!-- MathJax -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async
+            integrity="sha256-DViIOMYdwlM/axqoGDPeUyf0urLoHMN4QACBKyB58Uw=" crossorigin="anonymous"></script>
+    <!-- Other scripts and stylesheets -->
+    <link href="../css/local.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <script src="../js/svg-pan-zoom.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="container-fluid mb-sm-4 mb-xl-2">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">UKCA Box Model </a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon">
+          </button>
+
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="../page/index.html">Documentation</a></li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../lists/files.html">Source Files</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/modules.html">Modules</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/procedures.html">Procedures</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/types.html">Derived Types</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../lists/namelists.html">Namelists</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../program/ukca_box_model_main.html">Program</a>
+                </li>
+            </ul>
+              <div class="d-flex align-items-end flex-grow-1">
+                <form action="../search.html" role="search" class="ms-auto">
+                  <input type="text" class="form-control" aria-label="Search" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+                </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+  <div class="row">
+    <h1>emissions_environment</h1>
+      <div class="container p-2 mb-4 bg-light border rounded-3">
+    <div class="row align-items-center justify-content-between" id="info-bar">
+      <div class="col">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+
+            <li class="list-inline-item" id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/box_environment.F90"> Source File</a>
+            </li>
+        </ul>
+      </div>
+      <div class="col">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-end mb-0">
+                <li class="breadcrumb-item"><a href='../sourcefile/box_environment.f90.html'>box_environment.F90</a></li>
+                <li class="breadcrumb-item"><a href='../module/box_environment_mod.html'>box_environment_mod</a></li>
+                <li class="breadcrumb-item"><a href='../proc/read_box_environment_nml.html'>read_box_environment_nml</a></li>
+            <li class="breadcrumb-item active" aria-current="page">emissions_environment</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Enable Bootstrap tooltips
+    (function () {
+      const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+      const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    })();
+  </script>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+        <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="card mb-4">
+      <a data-bs-toggle="collapse" href="#vars-0"
+         aria-expanded="false" aria-controls="vars-0">
+         <h4 class="card-header bg-primary text-white">Variables</h4>
+      </a>
+      <div id="vars-0" class="collapse">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-ibvoc_isoprene~2">ibvoc_isoprene</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-ibvoc_terpene~2">ibvoc_terpene</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-ibvoc_methanol~2">ibvoc_methanol</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-ibvoc_acetone~2">ibvoc_acetone</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-inferno_bc~2">inferno_bc</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-inferno_ch4~2">inferno_ch4</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-inferno_co~2">inferno_co</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-inferno_nox~2">inferno_nox</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-inferno_oc~2">inferno_oc</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-inferno_so2~2">inferno_so2</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-inferno_c2h4~2">inferno_c2h4</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-inferno_c2h6~2">inferno_c2h6</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-inferno_c3h8~2">inferno_c3h8</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-inferno_hcho~2">inferno_hcho</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-inferno_mecho~2">inferno_mecho</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-inferno_nh3~2">inferno_nh3</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-inferno_dms~2">inferno_dms</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-zhsc~2">zhsc</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-u_scalar_10m~2">u_scalar_10m</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-ch4_wetl_emiss~2">ch4_wetl_emiss</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-dms_sea_conc~2">dms_sea_conc</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-chloro_sea~2">chloro_sea</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-dust_flux_div1~2">dust_flux_div1</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-dust_flux_div2~2">dust_flux_div2</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-dust_flux_div3~2">dust_flux_div3</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-dust_flux_div4~2">dust_flux_div4</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-dust_flux_div5~2">dust_flux_div5</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-dust_flux_div6~2">dust_flux_div6</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-grid_surf_area~2">grid_surf_area</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-ext_cg_flash~2">ext_cg_flash</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-ext_ic_flash~2">ext_ic_flash</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-kent~2">kent</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-kent_dsc~2">kent_dsc</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-u_rho_levels~2">u_rho_levels</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-v_rho_levels~2">v_rho_levels</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-geoph_on_theta_mlevs~2">geopH_on_theta_mlevs</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-rhokh_rdz~2">rhokh_rdz</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-dtrdz~2">dtrdz</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-we_lim~2">we_lim</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-t_frac~2">t_frac</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-zrzi~2">zrzi</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-we_lim_dsc~2">we_lim_dsc</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-t_frac_dsc~2">t_frac_dsc</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-zrzi_dsc~2">zrzi_dsc</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-dust_div1~2">dust_div1</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-dust_div2~2">dust_div2</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-dust_div3~2">dust_div3</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-dust_div4~2">dust_div4</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-dust_div5~2">dust_div5</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-dust_div6~2">dust_div6</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-interf_z~2">interf_z</a>
+            <a class="list-group-item" href="../namelist/emissions_environment.html#variable-grid_area_fullht~2">grid_area_fullht</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+  </div>
+
+    </div>
+
+    <div class="col-md-9" id='text'>
+        
+  <br class="visible-xs visible-sm hidden-md">
+  <section>
+    <h2>Variables</h2>
+    <table class="table table-striped" id="namelist-emissions_environment">
+      <thead><tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Default</th>
+          <th>Description</th>
+      </tr></thead>
+      <tbody>
+              <tr id="variable-ibvoc_isoprene~2">
+      <td><a href="#variable-ibvoc_isoprene~2">ibvoc_isoprene</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 1D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-ibvoc_terpene~2">
+      <td><a href="#variable-ibvoc_terpene~2">ibvoc_terpene</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 1D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-ibvoc_methanol~2">
+      <td><a href="#variable-ibvoc_methanol~2">ibvoc_methanol</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 1D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-ibvoc_acetone~2">
+      <td><a href="#variable-ibvoc_acetone~2">ibvoc_acetone</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 1D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-inferno_bc~2">
+      <td><a href="#variable-inferno_bc~2">inferno_bc</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 1D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-inferno_ch4~2">
+      <td><a href="#variable-inferno_ch4~2">inferno_ch4</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 1D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-inferno_co~2">
+      <td><a href="#variable-inferno_co~2">inferno_co</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 1D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-inferno_nox~2">
+      <td><a href="#variable-inferno_nox~2">inferno_nox</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 1D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-inferno_oc~2">
+      <td><a href="#variable-inferno_oc~2">inferno_oc</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 1D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-inferno_so2~2">
+      <td><a href="#variable-inferno_so2~2">inferno_so2</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 1D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-inferno_c2h4~2">
+      <td><a href="#variable-inferno_c2h4~2">inferno_c2h4</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 1D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-inferno_c2h6~2">
+      <td><a href="#variable-inferno_c2h6~2">inferno_c2h6</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 1D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-inferno_c3h8~2">
+      <td><a href="#variable-inferno_c3h8~2">inferno_c3h8</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 1D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-inferno_hcho~2">
+      <td><a href="#variable-inferno_hcho~2">inferno_hcho</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 1D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-inferno_mecho~2">
+      <td><a href="#variable-inferno_mecho~2">inferno_mecho</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 1D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-inferno_nh3~2">
+      <td><a href="#variable-inferno_nh3~2">inferno_nh3</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 1D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-inferno_dms~2">
+      <td><a href="#variable-inferno_dms~2">inferno_dms</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 1D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-zhsc~2">
+      <td><a href="#variable-zhsc~2">zhsc</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 2D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-u_scalar_10m~2">
+      <td><a href="#variable-u_scalar_10m~2">u_scalar_10m</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 2D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-ch4_wetl_emiss~2">
+      <td><a href="#variable-ch4_wetl_emiss~2">ch4_wetl_emiss</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 2D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-dms_sea_conc~2">
+      <td><a href="#variable-dms_sea_conc~2">dms_sea_conc</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 2D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-chloro_sea~2">
+      <td><a href="#variable-chloro_sea~2">chloro_sea</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 2D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-dust_flux_div1~2">
+      <td><a href="#variable-dust_flux_div1~2">dust_flux_div1</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 2D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-dust_flux_div2~2">
+      <td><a href="#variable-dust_flux_div2~2">dust_flux_div2</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 2D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-dust_flux_div3~2">
+      <td><a href="#variable-dust_flux_div3~2">dust_flux_div3</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 2D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-dust_flux_div4~2">
+      <td><a href="#variable-dust_flux_div4~2">dust_flux_div4</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 2D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-dust_flux_div5~2">
+      <td><a href="#variable-dust_flux_div5~2">dust_flux_div5</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 2D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-dust_flux_div6~2">
+      <td><a href="#variable-dust_flux_div6~2">dust_flux_div6</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 2D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-grid_surf_area~2">
+      <td><a href="#variable-grid_surf_area~2">grid_surf_area</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 2D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-ext_cg_flash~2">
+      <td><a href="#variable-ext_cg_flash~2">ext_cg_flash</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 2D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-ext_ic_flash~2">
+      <td><a href="#variable-ext_ic_flash~2">ext_ic_flash</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 2D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-kent~2">
+      <td><a href="#variable-kent~2">kent</a></td>
+      <td>integer</td>
+      <td>None</td>
+      <td><p>integer 2D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-kent_dsc~2">
+      <td><a href="#variable-kent_dsc~2">kent_dsc</a></td>
+      <td>integer</td>
+      <td>None</td>
+      <td><p>integer 2D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-u_rho_levels~2">
+      <td><a href="#variable-u_rho_levels~2">u_rho_levels</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 3D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-v_rho_levels~2">
+      <td><a href="#variable-v_rho_levels~2">v_rho_levels</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 3D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-geoph_on_theta_mlevs~2">
+      <td><a href="#variable-geoph_on_theta_mlevs~2">geopH_on_theta_mlevs</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 3D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-rhokh_rdz~2">
+      <td><a href="#variable-rhokh_rdz~2">rhokh_rdz</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 3D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-dtrdz~2">
+      <td><a href="#variable-dtrdz~2">dtrdz</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 3D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-we_lim~2">
+      <td><a href="#variable-we_lim~2">we_lim</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 3D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-t_frac~2">
+      <td><a href="#variable-t_frac~2">t_frac</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 3D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-zrzi~2">
+      <td><a href="#variable-zrzi~2">zrzi</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 3D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-we_lim_dsc~2">
+      <td><a href="#variable-we_lim_dsc~2">we_lim_dsc</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 3D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-t_frac_dsc~2">
+      <td><a href="#variable-t_frac_dsc~2">t_frac_dsc</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 3D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-zrzi_dsc~2">
+      <td><a href="#variable-zrzi_dsc~2">zrzi_dsc</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 3D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-dust_div1~2">
+      <td><a href="#variable-dust_div1~2">dust_div1</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 3D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-dust_div2~2">
+      <td><a href="#variable-dust_div2~2">dust_div2</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 3D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-dust_div3~2">
+      <td><a href="#variable-dust_div3~2">dust_div3</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 3D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-dust_div4~2">
+      <td><a href="#variable-dust_div4~2">dust_div4</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 3D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-dust_div5~2">
+      <td><a href="#variable-dust_div5~2">dust_div5</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 3D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-dust_div6~2">
+      <td><a href="#variable-dust_div6~2">dust_div6</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 3D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-interf_z~2">
+      <td><a href="#variable-interf_z~2">interf_z</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 3D environment fields</p></td>
+    </tr>
+
+              <tr id="variable-grid_area_fullht~2">
+      <td><a href="#variable-grid_area_fullht~2">grid_area_fullht</a></td>
+      <td>real</td>
+      <td>None</td>
+      <td><p>real 3D environment fields</p></td>
+    </tr>
+
+      </tbody>
+    </table>
+  </section>
+
+      <br>
+    </div>
+  </div>
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">
+            <p>
+              UKCA Box Model
+ was developed by Rob Waters<br>              &copy; 2026 
+</p>
+          </div>
+          <div class="col">
+            <p class="text-end">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+            </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+  </body>
+</html>

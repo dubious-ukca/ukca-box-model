@@ -1,0 +1,3 @@
+[submodule "ukca"]
+	path = ukca
+	url = git@github.com:MetOffice/ukca.git

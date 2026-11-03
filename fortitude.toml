@@ -1,0 +1,8 @@
+include = ["*.f90", "*.F90"]
+[check]
+line-length = 80
+exclude = [".git", "ukca"]
+respect-gitignore = true
+target-std = "f2008"
+[check.invalid-tab]
+indent-width = 2
