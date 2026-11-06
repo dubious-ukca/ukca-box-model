@@ -362,3 +362,8 @@ For local testing after building both packages:
 ```bash
 conda install --use-local ukca ukca-box-model
 ```
+
+## AI declaration
+
+AI tools were used in parts of this project (code review, the UKCA dump code
+and drafting this README); see [`aidecl.yaml`](aidecl.yaml) for details.
