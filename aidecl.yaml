@@ -1,0 +1,34 @@
+# AI Declaration Format (aidecl)
+# Use a role or team name rather than personal name if this file will be public
+
+schema_version: 1.0.0
+project:
+  name: ukca-box-model
+  repository: https://github.com/dubious-ukca/ukca-box-model
+  content_type: software
+ai_usage:
+  used: true
+  summary: >-
+    AI used to review and provide feedback on the maintainer's code and to
+    suggest alternative design features. The UKCA dump code
+    (src/box_dump.F90, tools/gen_ukca_internal_dump.py,
+    tools/compare_dumps.py) was written using AI and reviewed by the
+    maintainer. The README was largely drafted with AI assistance, directed
+    and reviewed by the maintainer.
+  level: moderate
+  tools:
+  - name: Claude
+    vendor: Anthropic
+    type: assistant
+    purpose:
+    - code review
+    - suggested improvements
+    - dump code generation
+    - README drafting
+  scope:
+    code_generation: true
+    documentation: true
+    code_review: true
+declaration:
+  date: '2026-11-06'
+  declared_by: Rob Waters
