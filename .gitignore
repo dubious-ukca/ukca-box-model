@@ -47,3 +47,5 @@ build/
 doc_local/
 # box model run directories (scripts/run_box_model.sh)
 runs/
+# box model output written to the working directory
+tracer_output.csv
