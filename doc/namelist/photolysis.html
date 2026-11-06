@@ -132,15 +132,15 @@
       </a>
       <div id="vars-0" class="collapse">
         <div class="list-group list-group-flush">
-            <a class="list-group-item" href="../namelist/photolysis.html#variable-fastjx_mode~3">fastjx_mode</a>
+            <a class="list-group-item" href="../namelist/photolysis.html#variable-fastjx_mode~2">fastjx_mode</a>
             <a class="list-group-item" href="../namelist/photolysis.html#variable-fastjx_numwl~2">fastjx_numwl</a>
-            <a class="list-group-item" href="../namelist/photolysis.html#variable-i_photol_scheme~3">i_photol_scheme</a>
-            <a class="list-group-item" href="../namelist/photolysis.html#variable-i_solcylc_type~3">i_solcylc_type</a>
-            <a class="list-group-item" href="../namelist/photolysis.html#variable-solcylc_start_year~3">solcylc_start_year</a>
+            <a class="list-group-item" href="../namelist/photolysis.html#variable-i_photol_scheme~2">i_photol_scheme</a>
+            <a class="list-group-item" href="../namelist/photolysis.html#variable-i_solcylc_type~2">i_solcylc_type</a>
+            <a class="list-group-item" href="../namelist/photolysis.html#variable-solcylc_start_year~2">solcylc_start_year</a>
             <a class="list-group-item" href="../namelist/photolysis.html#variable-l_cloud_pc2~2">l_cloud_pc2</a>
-            <a class="list-group-item" href="../namelist/photolysis.html#variable-l_strat_chem~3">l_strat_chem</a>
-            <a class="list-group-item" href="../namelist/photolysis.html#variable-l_use_photolysis~3">l_use_photolysis</a>
-            <a class="list-group-item" href="../namelist/photolysis.html#variable-fastjx_prescutoff~4">fastjx_prescutoff</a>
+            <a class="list-group-item" href="../namelist/photolysis.html#variable-l_strat_chem~2">l_strat_chem</a>
+            <a class="list-group-item" href="../namelist/photolysis.html#variable-l_use_photolysis~2">l_use_photolysis</a>
+            <a class="list-group-item" href="../namelist/photolysis.html#variable-fastjx_prescutoff~2">fastjx_prescutoff</a>
             <a class="list-group-item" href="../namelist/photolysis.html#variable-l_offline_photol~2">l_offline_photol</a>
         </div>
       </div>
@@ -183,8 +183,8 @@
           <th>Description</th>
       </tr></thead>
       <tbody>
-              <tr id="variable-fastjx_mode~3">
-      <td><a href="#variable-fastjx_mode~3">fastjx_mode</a></td>
+              <tr id="variable-fastjx_mode~2">
+      <td><a href="#variable-fastjx_mode~2">fastjx_mode</a></td>
       <td>integer</td>
       <td>None</td>
       <td><p>fast-jx photolysis mode above cutoff (1=lookup tables, 2=fast-jx +
@@ -198,24 +198,24 @@ lookup tables, 3=fast-jx)</p></td>
       <td><p>number of wavelengths to use in fast-jx. Options are 8, 12 or 18</p></td>
     </tr>
 
-              <tr id="variable-i_photol_scheme~3">
-      <td><a href="#variable-i_photol_scheme~3">i_photol_scheme</a></td>
+              <tr id="variable-i_photol_scheme~2">
+      <td><a href="#variable-i_photol_scheme~2">i_photol_scheme</a></td>
       <td>integer</td>
       <td>None</td>
       <td><p>Photolysis scheme: 0 = off, 1 = stratospheric only, 2 = offline/2-D,
 3 = Fast-JX</p></td>
     </tr>
 
-              <tr id="variable-i_solcylc_type~3">
-      <td><a href="#variable-i_solcylc_type~3">i_solcylc_type</a></td>
+              <tr id="variable-i_solcylc_type~2">
+      <td><a href="#variable-i_solcylc_type~2">i_solcylc_type</a></td>
       <td>integer</td>
       <td>None</td>
       <td><p>apply solar variability to photolysis (fast-jx only). 0 = no solar
 cycle, 1 = observed cycle, 2 = average cycle.</p></td>
     </tr>
 
-              <tr id="variable-solcylc_start_year~3">
-      <td><a href="#variable-solcylc_start_year~3">solcylc_start_year</a></td>
+              <tr id="variable-solcylc_start_year~2">
+      <td><a href="#variable-solcylc_start_year~2">solcylc_start_year</a></td>
       <td>integer</td>
       <td>None</td>
       <td><p>1st year for the solar cycle (used when i_solcylc_type = 1)</p></td>
@@ -228,24 +228,24 @@ cycle, 1 = observed cycle, 2 = average cycle.</p></td>
       <td><p>True if the atmosphere model is using the PC2 cloud scheme</p></td>
     </tr>
 
-              <tr id="variable-l_strat_chem~3">
-      <td><a href="#variable-l_strat_chem~3">l_strat_chem</a></td>
+              <tr id="variable-l_strat_chem~2">
+      <td><a href="#variable-l_strat_chem~2">l_strat_chem</a></td>
       <td>logical</td>
       <td>None</td>
       <td><p>True if UKCA is using a scheme that involves stratospheric chemistry
 i.e. Std Strat, Strattrop or CRI-strat</p></td>
     </tr>
 
-              <tr id="variable-l_use_photolysis~3">
-      <td><a href="#variable-l_use_photolysis~3">l_use_photolysis</a></td>
+              <tr id="variable-l_use_photolysis~2">
+      <td><a href="#variable-l_use_photolysis~2">l_use_photolysis</a></td>
       <td>logical</td>
       <td>None</td>
       <td><p>True if UKCA is expecting to apply Photolysis rates in the solver and
 hence needs the rates from the parent</p></td>
     </tr>
 
-              <tr id="variable-fastjx_prescutoff~4">
-      <td><a href="#variable-fastjx_prescutoff~4">fastjx_prescutoff</a></td>
+              <tr id="variable-fastjx_prescutoff~2">
+      <td><a href="#variable-fastjx_prescutoff~2">fastjx_prescutoff</a></td>
       <td>real</td>
       <td>None</td>
       <td><p>Cut-off Pressure for tabulated photolysis</p></td>
