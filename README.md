@@ -67,10 +67,18 @@ The CMake configuration supports split builds through these options:
 - `BUILD_BOX_MODEL` (default `ON`)
 - `UKCA_USE_EXTERNAL_LIBRARY` (default `OFF`)
 - `UKCA_EXTERNAL_MODULE_DIR` (required when `UKCA_USE_EXTERNAL_LIBRARY=ON`)
+- `UKCA_PRECISION` (default `double`; `single` is experimental and untested)
 
 If you are building the box model against an already-installed UKCA library,
 turn on `UKCA_USE_EXTERNAL_LIBRARY` and point `UKCA_EXTERNAL_MODULE_DIR` at the
 directory containing the UKCA `.mod` files.
+
+UKCA uses default `REAL` kinds throughout, so precision is chosen with compiler
+flags rather than a kind module, and the `ukca/` submodule does not need
+editing. Set it at configure time, for example
+`cmake -S . -B build -DUKCA_PRECISION=single`. The same flags go to both the
+UKCA library and the box model; an external UKCA library must be built with the
+same setting.
 
 ## Running
 
@@ -278,7 +286,8 @@ setup, any warnings, and the tracer values as the run progresses; use
 ## Compiler flags
 
 The build uses GNU Fortran (`gfortran`) flags: double precision by default
-(`-fdefault-real-8`), runtime checks and floating-point traps, and strict
+(`-fdefault-real-8 -fdefault-double-8`, controlled by `UKCA_PRECISION`),
+8-byte default integers (`-fdefault-integer-8`), runtime checks and floating-point traps, and strict
 warnings treated as errors for the box model code. See the
 `target_compile_options` calls in `src/CMakeLists.txt` for the full lists.
 

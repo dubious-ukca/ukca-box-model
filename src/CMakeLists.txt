@@ -292,7 +292,7 @@ add_library(ukca_standalone
   )
 
 # Set compile options for UKCA
-target_compile_options(ukca_standalone PRIVATE -fdefault-integer-8 -O0 -fcheck=all,no-bounds -ffpe-trap=invalid,zero,overflow -fdefault-real-8 -fdefault-double-8)
+target_compile_options(ukca_standalone PRIVATE ${UKCA_PRECISION_FLAGS} -O0 -fcheck=all,no-bounds -ffpe-trap=invalid,zero,overflow)
 
 install(TARGETS ukca_standalone
   ARCHIVE DESTINATION lib
@@ -339,7 +339,7 @@ add_executable(ukca_box_model ${BOX_MODEL_SOURCES})
 
 # Set compile options for box model
 target_compile_options(ukca_box_model PRIVATE
-  -fdefault-integer-8
+  ${UKCA_PRECISION_FLAGS}
   -O0
   -g
   -fcheck=all
@@ -353,8 +353,6 @@ target_compile_options(ukca_box_model PRIVATE
   -Warray-temporaries
   -Wimplicit-interface
   -fimplicit-none
-  -fdefault-real-8
-  -fdefault-double-8
   -std=f2008
   -fimplicit-none
   -Wpedantic
