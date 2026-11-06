@@ -4,20 +4,27 @@
 schema_version: 1.0.0
 project:
   name: ukca-box-model
-  repository: git@github.com:dubious-ukca/ukca-box-model.git
+  repository: https://github.com/dubious-ukca/ukca-box-model
   content_type: software
 ai_usage:
   used: true
-  summary: AI used to review and provide feedback on maintainer's code and suggest alternative design features. Output dump scripts written using AI and reviewed by maintainers. Some documentation written with AI assistance. 
+  summary: >-
+    AI used to review and provide feedback on the maintainer's code and to
+    suggest alternative design features. The UKCA dump code
+    (src/box_dump.F90, tools/gen_ukca_internal_dump.py,
+    tools/compare_dumps.py) was written using AI and reviewed by the
+    maintainer. The README was largely drafted with AI assistance, directed
+    and reviewed by the maintainer.
   level: moderate
   tools:
   - name: Claude
     vendor: Anthropic
     type: assistant
     purpose:
-    - code review 
+    - code review
     - suggested improvements
-    - output dump code generation 
+    - dump code generation
+    - README drafting
   scope:
     code_generation: true
     documentation: true
